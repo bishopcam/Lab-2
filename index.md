@@ -28,3 +28,56 @@ the relevant arguments to the methods are what is given by the path in the url, 
 
 ---
 
+Then, to see the overall string serverMessage that these queries modified, you visit the basic localhost with the path as backslash. that will look like this:    
+
+![Image](pictures/StringServerResult.png)
+
+---
+A failure inducing input for the function I chose <code>reverseInPlace(int[] array)</code> , is any array that is not naturally mirrored in the center. This would fail because the second half would be overwritten, and it the actual would be <code>new int[]{ 5, 1, 5 }</code>  
+
+```
+@Test 
+	public void testReverseArray() {
+    int[] input1 = { 3, 1, 5 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 5, 1, 3 }, input1);
+	}
+```
+An input that does not induce a failure is something that is an array this is mirrored across the center. This is because it is okay that it overwrites when it goes over the whole array because it is still the correct values.  
+
+```
+@Test 
+	public void testReverseArray2() {
+    int[] input1 = { 5, 1, 5 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 5, 1, 5 }, input1);
+	}
+```
+Running these two JUnit Tests gives this output (flipped order so that the error doesnt cover up the second test) :  
+
+![Image](pictures/ReverseInPlaceError.png)
+
+Then, me and my partner in lab solved this bug in the <code>reverseInPlace(int[] array)</code> function where the error had to do with how it would both iterate over the whole arraylist and end up mirroring the array in the middle, and not using a temporary variable to store the value that is taken from the array so it cannot be overwritten. before the fix it looked like this:  
+
+```
+ static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+  
+After me and my partner's changes, it looked like this:  
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < (arr.length / 2); i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
+---
+
+
+
