@@ -8,12 +8,12 @@ The first task of this lab report was creating a simple server that can add to a
 ---
 Then, once the server was running on my local machine, I added to the empty serverMessage string what was past the <code>=</code> sign in a url, formatted like: <code>/add-message?s=Hello, welcome to the string server!</code> where the string is after the <code>s=</code>.  
 
-![Image](pictures/StringServer 1st add.png)
+![Image](pictures/StringServer1stadd.png)
 
 ---
 Then I did this once again with a second string  
 
-![Image](pictures/StringServer 2nd add.png)
+![Image](pictures/StringServer2ndadd.png)
 
 ---
 
