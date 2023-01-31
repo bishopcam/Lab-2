@@ -80,9 +80,10 @@ static void reverseInPlace(int[] arr) {
     }
   }
 ```
+This fixes the reversal by both making sure it doesnt run all the way through the array reversing what was alreadyy overwritten, and adds a temporary value so that the array can change the value after it is taken out of the array and it is not lost.
 ---
 ### Part 3
 
-
+I think one of the most fascinating things we learned was in week 2 when we learned how to actually start up servers we can reach online on the cse remote servers. I think it is just really cool that each student could create their own unique visitable url that could allow us to manipulate eachothers data on the servers. I think something like this is super interesting when combined with more interaction methods than altering the URL to access it and I am excited to learn more about hosting open sites on servers in the future.
 
 
