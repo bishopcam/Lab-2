@@ -10,4 +10,5 @@ Then, once the server was running on my local machine, I added to the empty serv
 
 ![Image](pictures/StringServer 1st add.png)
 
-g
+---
+Then I did this once again with a second string
