@@ -1,6 +1,7 @@
 # Lab Report 2 - Servers and Bugs 
 ## Cameron Bishop
 ---
+### Part 1
 The first task of this lab report was creating a simple server that can add to a string with a certain URI query. My version of this server I coded looked like this in VSCode.  
 
 ![Image](pictures/StringServer.png)
@@ -33,6 +34,7 @@ Then, to see the overall string serverMessage that these queries modified, you v
 ![Image](pictures/StringServerResult.png)
 
 ---
+### Part 2
 A failure inducing input for the function I chose <code>reverseInPlace(int[] array)</code> , is any array that is not naturally mirrored in the center. This would fail because the second half would be overwritten, and it the actual would be <code>new int[]{ 5, 1, 5 }</code>  
 
 ```
@@ -55,8 +57,9 @@ An input that does not induce a failure is something that is an array this is mi
 ```
 Running these two JUnit Tests gives this output (flipped order so that the error doesnt cover up the second test) :  
 
-![Image](pictures/ReverseInPlaceError.png)
+![Image](pictures/ReverseInPlaceError.png)  
 
+---
 Then, me and my partner in lab solved this bug in the <code>reverseInPlace(int[] array)</code> function where the error had to do with how it would both iterate over the whole arraylist and end up mirroring the array in the middle, and not using a temporary variable to store the value that is taken from the array so it cannot be overwritten. before the fix it looked like this:  
 
 ```
@@ -78,6 +81,8 @@ static void reverseInPlace(int[] arr) {
   }
 ```
 ---
+### Part 3
+
 
 
 
